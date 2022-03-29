@@ -1,4 +1,6 @@
-// next.config.js
+// Loader Using https://github.com/Niels-IO/next-image-export-optimizer
+// Use Next.js advanced <Image/> component with the static export functionality. Optimizes all static images in an additional step after the Next.js static export.
+
 module.exports = {
   images: {
     loader: "custom",
