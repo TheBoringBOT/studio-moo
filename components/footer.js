@@ -1,5 +1,12 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import Container from "./container";
+import {
+  SITE_NAME,
+  SITE_FOOTER_TEXT,
+  SITE_DESCRIPTION_SHORT,
+  SITE_CONTACT_PHONE,
+  SITE_CONTACT_EMAIL,
+  SITE_OPENING_HOURS,
+} from "../lib/constants";
 
 export default function Footer() {
   return (
@@ -7,24 +14,30 @@ export default function Footer() {
       <Container>
         <div className="py-28 flex flex-col lg:flex-row items-center">
           <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
+            {SITE_NAME} {SITE_DESCRIPTION_SHORT}
           </h3>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
             <a
-              href="https://nextjs.org/docs/basic-features/pages"
+              href={`mailto:${SITE_CONTACT_EMAIL}`}
               className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
             >
-              Read Documentation
+              Mejla oss
             </a>
             <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
+              href={`tel:${SITE_CONTACT_PHONE}`}
+              className="mx-3 font-bold hover:underline text-center"
             >
-              View on GitHub
+              Ring oss
+              <p className="italic">
+                <small>{SITE_OPENING_HOURS}</small>
+              </p>
             </a>
           </div>
         </div>
+        <div className="flex items-center justify-center lg:justify-start py-10">
+          <span>{SITE_FOOTER_TEXT}</span>
+        </div>
       </Container>
     </footer>
-  )
+  );
 }
