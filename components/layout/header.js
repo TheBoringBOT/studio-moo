@@ -1,11 +1,15 @@
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/blog">
-        <a className="hover:underline"> {"<"} tillbaka</a>
-      </Link>
-    </h2>
+    <div className="flex justify-between align-center items-center leading-tight mb-20 mt-8">
+      <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter ">
+        <Link href="/blog">
+          <a className="hover:underline"> {"<"} tillbaka</a>
+        </Link>
+      </h2>
+      <ThemeToggle iconWidth={30} />
+    </div>
   );
 }
