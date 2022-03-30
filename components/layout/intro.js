@@ -2,7 +2,7 @@ import {
   SITE_NAME,
   SITE_BLOG_TITLE,
   SITE_BLOG_DESCRIPTION,
-} from "../lib/constants";
+} from "../../lib/constants";
 
 export default function Intro() {
   return (

@@ -1,10 +1,10 @@
-import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
-import Layout from "../components/layout";
 import Head from "next/head";
 import { SITE_NAME, SITE_DESCRIPTION_SHORT } from "../lib/constants";
+
+// Layout components
+import Container from "../components/layout/container";
+import Intro from "../components/layout/intro";
+import Layout from "../components/layout/layout";
 
 export default function Index() {
   return (

@@ -6,7 +6,7 @@ import {
   SITE_CONTACT_PHONE,
   SITE_CONTACT_EMAIL,
   SITE_OPENING_HOURS,
-} from "../lib/constants";
+} from "../../lib/constants";
 
 export default function Footer() {
   return (
