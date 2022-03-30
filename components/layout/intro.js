@@ -7,7 +7,7 @@ import ThemeToggle from "./theme-toggle";
 
 export default function Intro() {
   return (
-    <section className="flex-col   lg:flex-row flex items-baseline lg:justify-between mt-16 mb-16 md:mb-12">
+    <section className="flex-col   lg:flex-row flex items-baseline lg:justify-between  mb-16 md:mb-12">
       <div className="flex-col">
         <h1 className="text-left text-7xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
           {SITE_BLOG_TITLE}
