@@ -3,8 +3,8 @@ import { SITE_NAME, SITE_DESCRIPTION_SHORT } from "../lib/constants";
 
 // Layout components
 import Container from "../components/layout/container";
-import Intro from "../components/layout/intro";
 import Layout from "../components/layout/layout";
+import HeroText from "../components/home/hero/hero-text";
 
 export default function Index() {
   return (
@@ -15,9 +15,8 @@ export default function Index() {
             {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
           </title>
         </Head>
-        <Container>
-          <Intro />
-        </Container>
+        <HeroText />
+        <Container></Container>
       </Layout>
     </>
   );
