@@ -37,3 +37,4 @@ yarn-error.log*
 
 # image-optimizer
 public/assets/blog/*/nextImageExportOptimizer/*
+.vscode/settings.json
