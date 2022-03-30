@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps, router }) {
         animate="pageAnimate"
         variants={pageVariants}
       >
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </motion.div>
     </ThemeProvider>
   );
