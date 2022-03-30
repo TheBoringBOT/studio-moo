@@ -9,10 +9,10 @@ export default function Intro() {
   return (
     <section className="flex-col   lg:flex-row flex items-baseline lg:justify-between  mb-16 md:mb-12">
       <div className="flex-col">
-        <h1 className="text-left text-7xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+        <h1 className="text-left text-8xl font-bold tracking-tighter leading-tight md:pr-8">
           {SITE_BLOG_TITLE}
           <br />
-          <p className="  text-sm tracking-wide md:mt-[-20px] md:pl-2">
+          <p className="  text-sm tracking-wide mt-[-20px] md:pl-2">
             Av {SITE_NAME}.
           </p>
         </h1>
