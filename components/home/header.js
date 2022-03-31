@@ -40,7 +40,7 @@ export default function Header() {
               <Link href="/blog">
                 <a
                   href={`mailto:`}
-                  className="mx-3 bg-black dark:bg-gray-100 hover:bg-white hover:text-black hover:dark:bg-black hover:dark:border-gray-100 hover:dark:text-gray-100 border border-black text-white dark:text-black font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
+                  className="mx-3 bg-black dark:bg-gray-100 hover:bg-white hover:text-black hover:dark:bg-transparent hover:dark:border-gray-100 hover:dark:text-gray-100 border border-black text-white dark:text-black font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
                 >
                   Mejla oss
                 </a>
