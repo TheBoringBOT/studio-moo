@@ -2,6 +2,33 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./hero.module.scss";
 
+export default function HeroText() {
+  const [playMarquee, setPlayMarquee] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPlayMarquee(true);
+    }, 2000);
+  }, []);
+  return (
+    <motion.div className="relative z-50 " variants={AnimateHero}>
+      <div className="w-100 flex justify-start">
+        <HeroTextTop title={text1} />
+      </div>
+      <div className="w-100 flex ">
+        <HeroTextCenter title={text2} playMarquee={playMarquee} />
+      </div>
+      <div className="w-100 flex justify-end">
+        <HeroTextBottom title={text3} />
+      </div>
+    </motion.div>
+  );
+}
+
+const text1 = "brand";
+const text2 = "experience";
+const text3 = "studio";
+
 const AnimateHero = {
   animate: {
     transition: {
@@ -24,7 +51,7 @@ const AnimatedChars = {
 
 const AnimatedText = ({ title, disabled, classes }) => (
   <motion.span
-    className="px-[8vw]  4xl:px-[10vw] text-[23vw] lg:text-[13rem] font-black whitespace-nowrap  leading-tight"
+    className="px-[8vw]  4xl:px-[10vw] text-[23vw] lg:text-[13rem] font-bold whitespace-nowrap  leading-tight"
     variants={disabled ? null : AnimateHero}
     initial="initial"
     animate="animate"
@@ -40,29 +67,6 @@ const AnimatedText = ({ title, disabled, classes }) => (
     ))}
   </motion.span>
 );
-
-export default function HeroText() {
-  const [playMarquee, setPlayMarquee] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setPlayMarquee(true);
-    }, 2000);
-  }, []);
-  return (
-    <motion.div className="relative z-50 " variants={AnimateHero}>
-      <div className="w-100 flex justify-start">
-        <HeroTextTop title={"brand"} />
-      </div>
-      <div className="w-100 flex ">
-        <HeroTextCenter title={"experience"} playMarquee={playMarquee} />
-      </div>
-      <div className="w-100 flex justify-end">
-        <HeroTextBottom title={"studio"} />
-      </div>
-    </motion.div>
-  );
-}
 
 const HeroTextTop = ({ title }) => {
   return (
@@ -117,7 +121,7 @@ const HeroTextBottom = ({ title }) => {
         transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
         className="scroll"
       >
-        <motion.span
+        {/* <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
@@ -138,7 +142,7 @@ const HeroTextBottom = ({ title }) => {
           }}
         >
           down
-        </motion.span>
+        </motion.span> */}
       </motion.div>
       <AnimatedText title={title} />
     </div>
