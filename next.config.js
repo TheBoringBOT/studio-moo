@@ -2,6 +2,12 @@
 // Use Next.js advanced <Image/> component with the static export functionality. Optimizes all static images in an additional step after the Next.js static export.
 
 module.exports = {
+  // for translations
+  i18n: {
+    locales: ["en", "se"],
+    defaultLocale: "se",
+  },
+
   images: {
     loader: "custom",
     nextImageExportOptimizer: {
