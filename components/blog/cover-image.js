@@ -1,5 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
+
+// ExportedImage uses next/image to render images. But works also for exports
 import ExportedImage from "next-image-export-optimizer";
 
 export default function CoverImage({ title, src, slug, height, width }) {
