@@ -3,7 +3,10 @@ import { ThemeProvider } from "next-themes";
 import { motion } from "framer-motion";
 import { pageVariants } from "../lib/animation-constants";
 
-export default function MyApp({ Component, pageProps, router }) {
+// Get current language content
+import { renderLanguageContent } from "../utils/language/render-language-content";
+
+export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
       {/* <motion.div
@@ -12,7 +15,7 @@ export default function MyApp({ Component, pageProps, router }) {
         animate="pageAnimate"
         variants={pageVariants}
       > */}
-      <Component {...pageProps} />
+      <Component {...pageProps} {...renderLanguageContent()} />
       {/* </motion.div> */}
     </ThemeProvider>
   );

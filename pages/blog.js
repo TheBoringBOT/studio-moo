@@ -12,19 +12,20 @@ import MoreStories from "../components/blog/more-stories";
 import HeroPost from "../components/blog/hero-post";
 import { getAllPosts } from "../lib/api";
 
-export default function Blog({ allPosts }) {
+export default function Blog({ allPosts, lang_blog_content, lang_footer }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
 
-  console.log(heroPost);
   return (
     <>
-      <Layout>
+      <Layout lang_footer={lang_footer}>
         <Head>
-          <title>{SITE_NAME} | Blog</title>
+          <title>
+            {SITE_NAME} | {lang_blog_content.title}
+          </title>
         </Head>
         <Container>
-          <Intro />
+          <Intro lang_blog_content={lang_blog_content} />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -37,7 +38,12 @@ export default function Blog({ allPosts }) {
             />
           )}
           <Spacer />
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && (
+            <MoreStories
+              posts={morePosts}
+              lang_blog_content={lang_blog_content}
+            />
+          )}
         </Container>
       </Layout>
     </>
