@@ -6,14 +6,14 @@ import { pageVariants } from "../lib/animation-constants";
 export default function MyApp({ Component, pageProps, router }) {
   return (
     <ThemeProvider attribute="class">
-      <motion.div
+      {/* <motion.div
         key={router.route}
         initial="pageInitial"
         animate="pageAnimate"
         variants={pageVariants}
-      >
-        <Component {...pageProps} />
-      </motion.div>
+      > */}
+      <Component {...pageProps} />
+      {/* </motion.div> */}
     </ThemeProvider>
   );
 }
