@@ -5,6 +5,7 @@ import { SITE_NAME, SITE_DESCRIPTION_SHORT } from "../lib/constants";
 import Container from "../components/layout/container";
 import Layout from "../components/layout/layout";
 import HeroText from "../components/home/hero/hero-text";
+import Header from "../components/home/header";
 
 export default function Index() {
   return (
@@ -15,7 +16,9 @@ export default function Index() {
             {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
           </title>
         </Head>
-        <HeroText />
+        <Header />
+
+        {/* <HeroText /> */}
         <Container></Container>
       </Layout>
     </>
