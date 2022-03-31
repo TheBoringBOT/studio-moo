@@ -2,6 +2,7 @@ import Avatar from "./avatar";
 import DateFormatter from "../../utils/date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
+import ReadingTime from "././../../utils/reading-time";
 
 export default function HeroPost({
   title,
@@ -10,6 +11,7 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
+  postContent,
 }) {
   return (
     <section>
@@ -29,8 +31,13 @@ export default function HeroPost({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
+          <div className="flex items-center font-semibold justify-between mb-6">
+            <div className=" text-lg ">
+              <DateFormatter dateString={date} />
+            </div>
+            <div className=" text-lg">
+              <ReadingTime postContent={postContent} />
+            </div>
           </div>
         </div>
         <div>

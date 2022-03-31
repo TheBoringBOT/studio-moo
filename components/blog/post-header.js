@@ -2,8 +2,15 @@ import Avatar from "./avatar";
 import DateFormatter from "../../utils/date-formatter";
 import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
+import ReadingTime from "../../utils/reading-time";
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({
+  title,
+  coverImage,
+  date,
+  author,
+  postContent,
+}) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -17,8 +24,13 @@ export default function PostHeader({ title, coverImage, date, author }) {
         <div className="block md:hidden mb-6">
           <Avatar name={author.name} picture={author.picture} />
         </div>
-        <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
+        <div className="flex items-center font-semibold justify-between mb-6">
+          <div className="mb-6 text-lg ">
+            <DateFormatter dateString={date} />
+          </div>
+          <div className="mb-6 text-lg">
+            <ReadingTime postContent={postContent} />
+          </div>
         </div>
       </div>
     </>

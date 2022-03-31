@@ -15,6 +15,8 @@ import { getAllPosts } from "../lib/api";
 export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+
+  console.log(heroPost);
   return (
     <>
       <Layout>
@@ -31,6 +33,7 @@ export default function Blog({ allPosts }) {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              postContent={heroPost.content}
             />
           )}
           <Spacer />
@@ -49,6 +52,7 @@ export async function getStaticProps() {
     "author",
     "coverImage",
     "excerpt",
+    "content",
   ]);
 
   return {

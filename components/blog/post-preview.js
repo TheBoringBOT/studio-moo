@@ -2,9 +2,11 @@ import Avatar from "./avatar";
 import DateFormatter from "../../utils/date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
+import ReadingTime from "../../utils/reading-time";
 
 export default function PostPreview({
   title,
+  postContent,
   coverImage,
   date,
   excerpt,
@@ -27,8 +29,13 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+      <div className="flex items-center font-semibold justify-between mb-6">
+        <div className=" text-lg ">
+          <DateFormatter dateString={date} />
+        </div>
+        <div className=" text-lg">
+          <ReadingTime postContent={postContent} />
+        </div>
       </div>
       <p className="text-lg leading-relaxed mb-4 line-clamp-3">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
