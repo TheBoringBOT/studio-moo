@@ -8,7 +8,6 @@ import HeroText from "../components/home/hero/hero-text";
 import Header from "../components/home/header";
 
 export default function Index({ lang_footer, lang_home_nav }) {
-  console.log(lang_footer);
   return (
     <>
       <Layout lang_footer={lang_footer}>
