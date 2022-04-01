@@ -13,13 +13,3 @@ export const getFullYear = () => {
   const date = new Date({ locale: se });
   return date.getFullYear();
 };
-
-// show how long since post was updated
-export const PostWasUpdatedAt = (dateString) => {
-  // returns in swedish format
-  // return formatRelative(subDays(new Date(), 3), new Date(), {
-  //   locale: se,
-  // });
-  return "fish";
-  //=> "last Friday at 7:26 p.m."
-};
