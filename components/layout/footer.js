@@ -1,4 +1,5 @@
 import Container from "./container";
+import { useEffect, useState } from "react";
 
 import {
   SITE_NAME,
@@ -10,6 +11,9 @@ import {
 } from "../../lib/constants";
 
 export default function Footer() {
+  // Get random quote
+  const { quote, source } = getRandomQuote();
+
   return (
     <footer className="bg-accent-1 border-t border-accent-2 dark:border-0 dark:bg-black">
       <Container>
@@ -35,10 +39,51 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="flex items-center justify-center lg:justify-start py-10">
-          <span>{SITE_FOOTER_TEXT}</span>
+        <div className="flex flex-col lg:flex-row  items-center justify-center lg:justify-between py-10">
+          <span className="font-semibold">{SITE_FOOTER_TEXT}</span>
+          <span className="text-center mt-5 text-sm opacity-50">
+            <i>{quote}</i>
+            <br className="lg:hidden" /> - {source}
+          </span>
         </div>
       </Container>
     </footer>
   );
 }
+
+//inspiring quotes array easter egg
+const quotes = [
+  {
+    quote: "“If you’re going through hell, keep going.”",
+    source: "Winston Churchill",
+  },
+  {
+    quote: "“Do what you can, with what you have, where you are.”",
+    source: "Theodore Roosevelt",
+  },
+  {
+    quote: "“It does not matter how slowly you go as long as you do not stop.”",
+    source: "Confucius",
+  },
+  {
+    quote: "“Never give up.”",
+    source: "Winston Churchill",
+  },
+  {
+    quote: "“Do what you feel in your heart to be right.”",
+    source: "Eleanor Roosevelt",
+  },
+  {
+    quote: "“The only way to do great work is to love what you do.”",
+    source: "Steve Jobs",
+  },
+  {
+    quote: "“The best way to predict the future is to create it.”",
+    source: "Abraham Lincoln",
+  },
+];
+
+const getRandomQuote = () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+};
