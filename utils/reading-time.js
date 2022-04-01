@@ -1,11 +1,8 @@
 import readingTime from "reading-time";
-import { renderLanguageContent } from "../utils/language/render-language-content";
 
 export default function ReadingTime({ postContent }) {
-  const currentLanguage = renderLanguageContent().lang_current;
-  console.log(currentLanguage);
   const stats = readingTime(postContent);
-  let text = stats.text;
+
   // ->
   // stats: {
   //   text: '1 min read',
@@ -17,10 +14,8 @@ export default function ReadingTime({ postContent }) {
   return (
     <>
       <span className="text-lg">
-        {/* if current lang swedish then change text */}
-        {currentLanguage === "se"
-          ? stats.text.replace("min read", "minuter att läsa")
-          : stats.text}
+        {/* Change text to swedish */}
+        {stats.text.replace("min read", "minuter att läsa")}
       </span>
     </>
   );

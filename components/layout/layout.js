@@ -2,7 +2,7 @@ import Alert from "./alert";
 import Footer from "./footer";
 import Meta from "./meta";
 
-export default function Layout({ preview, children, lang_footer }) {
+export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
@@ -12,7 +12,7 @@ export default function Layout({ preview, children, lang_footer }) {
         <main>{children}</main>
       </div>
 
-      <Footer lang_footer={lang_footer} />
+      <Footer />
     </>
   );
 }

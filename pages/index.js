@@ -7,16 +7,16 @@ import Layout from "../components/layout/layout";
 import HeroText from "../components/home/hero/hero-text";
 import Header from "../components/home/header";
 
-export default function Index({ lang_footer, lang_home_nav }) {
+export default function Index() {
   return (
     <>
-      <Layout lang_footer={lang_footer}>
+      <Layout>
         <Head>
           <title>
             {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
           </title>
         </Head>
-        <Header lang_home_nav={lang_home_nav} />
+        <Header />
 
         {/* <HeroText /> */}
         <Container></Container>

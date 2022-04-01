@@ -3,8 +3,9 @@ import Container from "../layout/container";
 import Logo from "../../public/logo.svg";
 import ExportedImage from "next-image-export-optimizer";
 import { motion } from "framer-motion";
+import { SITE_CONTACT_EMAIL } from "../../lib/constants";
 
-export default function Header({ lang_home_nav }) {
+export default function Header({}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: -180 }}
@@ -24,27 +25,26 @@ export default function Header({ lang_home_nav }) {
             <ul className="flex justify-end items-center space-x-6">
               <Link href="/blog">
                 <a className="hover:underline duration-200 transition-all">
-                  {lang_home_nav.about}
+                  Om Oss
                 </a>
               </Link>
               <Link href="/blog">
                 <a className="hover:underline duration-200 transition-all">
-                  {lang_home_nav.services}
+                  Tjänster
                 </a>
               </Link>
-              <Link href="/blog">
+              <Link href="/blogg">
                 <a className="hover:underline duration-200 transition-all">
-                  {lang_home_nav.blog}
+                  Blogg
                 </a>
               </Link>
-              <Link href="/blog">
-                <a
-                  href={`mailto:`}
-                  className="mx-3 bg-black dark:bg-gray-100 hover:bg-white hover:text-black hover:dark:bg-transparent hover:dark:border-gray-100 hover:dark:text-gray-100 border border-black text-white dark:text-black font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-                >
-                  {lang_home_nav.mail}
-                </a>
-              </Link>
+
+              <a
+                href={`mailto:${SITE_CONTACT_EMAIL}`}
+                className="mx-3 bg-black dark:bg-gray-100 hover:bg-white hover:text-black hover:dark:bg-transparent hover:dark:border-gray-100 hover:dark:text-gray-100 border border-black text-white dark:text-black font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
+              >
+                Mejla Oss
+              </a>
             </ul>
           </nav>
         </div>

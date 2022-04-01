@@ -3,10 +3,12 @@
 
 module.exports = {
   // for translations
-  i18n: {
-    locales: ["en", "se"],
-    defaultLocale: "se",
-  },
+  //! removed for now as does not work on export - possible fix noted in _app.js
+  // i18n: {
+  //   locales: ["en", "se"],
+  //   defaultLocale: "se",
+  // },
+  trailingSlash: true,
 
   images: {
     loader: "custom",

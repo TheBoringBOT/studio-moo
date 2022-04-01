@@ -4,7 +4,7 @@ import ErrorPage from "next/error";
 // Layout components
 import Container from "../../components/layout/container";
 import Layout from "../../components/layout/layout";
-import Header from "../../components/layout/header";
+import Header from "../../components/blog/header";
 import PostBody from "../../components/blog/post-body";
 
 // Blog components
@@ -17,23 +17,13 @@ import Head from "next/head";
 import { SITE_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 
-export default function Post({
-  post,
-  morePosts,
-  preview,
-  lang_blog_content,
-  lang_footer,
-}) {
+export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout
-      preview={preview}
-      lang_blog_content={lang_blog_content}
-      lang_footer={lang_footer}
-    >
+    <Layout preview={preview}>
       <Container>
         <Header />
         {router.isFallback ? (
