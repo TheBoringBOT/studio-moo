@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { SITE_NAME } from "../lib/constants";
+import { SITE_BLOG_META_TITLE, SITE_BLOG_DESCRIPTION } from "../lib/constants";
 
 // layout components
-import Intro from "../components/layout/intro";
+import Intro from "../components/blog/intro";
 import Layout from "../components/layout/layout";
 import Container from "../components/layout/container";
 import Spacer from "../components/layout/section-separator";
@@ -12,20 +12,18 @@ import MoreStories from "../components/blog/more-stories";
 import HeroPost from "../components/blog/hero-post";
 import { getAllPosts } from "../lib/api";
 
-export default function Blog({ allPosts, lang_blog_content, lang_footer }) {
+export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
 
   return (
     <>
-      <Layout lang_footer={lang_footer}>
+      <Layout>
         <Head>
-          <title>
-            {SITE_NAME} | {lang_blog_content.title}
-          </title>
+          <title>{SITE_BLOG_META_TITLE}</title>
         </Head>
         <Container>
-          <Intro lang_blog_content={lang_blog_content} />
+          <Intro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -38,12 +36,7 @@ export default function Blog({ allPosts, lang_blog_content, lang_footer }) {
             />
           )}
           <Spacer />
-          {morePosts.length > 0 && (
-            <MoreStories
-              posts={morePosts}
-              lang_blog_content={lang_blog_content}
-            />
-          )}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>
