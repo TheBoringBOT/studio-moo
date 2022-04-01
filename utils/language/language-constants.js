@@ -2,6 +2,8 @@
 export const lang = {
   // English Language
   en: {
+    lang_current: "en",
+    lang_flag: "🇬🇧",
     //Homepage content
     lang_home_nav: {
       home: "Home",
@@ -29,6 +31,8 @@ export const lang = {
 
   // Swedish Language
   se: {
+    lang_current: "se",
+    lang_flag: "🇸🇪",
     //Homepage content: ;
     lang_home_nav: {
       home: "Hem",
