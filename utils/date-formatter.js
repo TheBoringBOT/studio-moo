@@ -10,6 +10,6 @@ export default function DateFormatter({ dateString, formatStr = "PP" }) {
 }
 
 export const getFullYear = () => {
-  const date = new Date({ locale: se });
+  const date = new Date();
   return date.getFullYear();
 };
