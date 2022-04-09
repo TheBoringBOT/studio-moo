@@ -17,3 +17,36 @@ body {
   background-size: 600px;
   background-position: 50% 50%;
 }
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url("/assets/fonts/MonumentExtended-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url("/assets/fonts/MonumentExtended-Ultrabold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.title-bold {
+  font-family: "Monument Extended", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.title-normal {
+  font-family: "Monument Extended", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
