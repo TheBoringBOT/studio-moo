@@ -14,8 +14,9 @@ module.exports = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
-        "text-primary": "#fff",
-        "bg-primary": "#011118",
+        "text-primary": "#15161e",
+        "text-secondary": "#40414a",
+        "bg-primary": "#15161e",
       },
       spacing: {
         28: "7rem",

@@ -24,9 +24,9 @@ export default function Index() {
         <Header />
 
         <Hero />
-        <About />
+        {/* <About />
         <OurProcess />
-        <Work />
+        <Work /> */}
         <Container></Container>
       </Layout>
     </div>

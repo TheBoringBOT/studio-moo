@@ -12,11 +12,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-primary text-text-primary border-t border-accent-2 dark:border-0 dark:bg-black">
+    <footer className="bg-bg-primary text-white border-t border-accent-2 dark:border-0 dark:bg-black">
       <Container>
-        <div className="py-28 flex flex-col  items-start ">
+        <div className="py-28 flex flex-col  items-center md:items-start ">
           <span className="text-xl font-medium mb-4">Get in touch.</span>
-          <h3 className="text-6xl lg:text-6xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
+          <h3 className="text-3xl lg:text-6xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-3/4 title-normal">
             Think your brand or company could do with help from us?
           </h3>
           <div className="mt-10 flex items-start text-3xl underline">
