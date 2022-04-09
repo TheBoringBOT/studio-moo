@@ -10,3 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.grain {
+  background: url("/assets/images/grain.png");
+  background-repeat: repeat;
+  background-size: 600px;
+  background-position: 50% 50%;
+}

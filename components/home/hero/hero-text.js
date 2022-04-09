@@ -11,23 +11,25 @@ export default function HeroText() {
     }, 2000);
   }, []);
   return (
-    <motion.div className="relative z-50 " variants={AnimateHero}>
-      <div className="w-100 flex justify-start">
-        <HeroTextTop title={text1} />
-      </div>
-      <div className="w-100 flex ">
-        <HeroTextCenter title={text2} playMarquee={playMarquee} />
-      </div>
-      <div className="w-100 flex justify-end">
-        <HeroTextBottom title={text3} />
-      </div>
-    </motion.div>
+    <div className="mt-[8vh]">
+      <motion.div className="relative z-50 " variants={AnimateHero}>
+        <div className="w-100 flex justify-start ">
+          <HeroTextTop title={text1} />
+        </div>
+        <div className="w-100 flex text-text-primary stroke-1">
+          <HeroTextCenter title={text2} playMarquee={playMarquee} />
+        </div>
+        <div className="w-100 flex justify-end">
+          <HeroTextBottom title={text3} />
+        </div>
+      </motion.div>
+    </div>
   );
 }
 
-const text1 = "brand";
-const text2 = "experience";
-const text3 = "studio";
+const text1 = "webbyrå";
+const text2 = "studio moo";
+const text3 = "sthlm.";
 
 const AnimateHero = {
   animate: {
@@ -49,9 +51,9 @@ const AnimatedChars = {
   },
 };
 
-const AnimatedText = ({ title, disabled, classes }) => (
+const AnimatedText = ({ title, disabled, noPaddingLeft }) => (
   <motion.span
-    className="px-[8vw]  4xl:px-[10vw] text-[23vw] lg:text-[13rem] font-bold whitespace-nowrap  leading-tight"
+    className={`  pr-[8vw]   4xl:pr-[10vw]  text-[23vw] lg:text-[13rem] font-bold whitespace-nowrap  leading-tight`}
     variants={disabled ? null : AnimateHero}
     initial="initial"
     animate="animate"
@@ -82,7 +84,7 @@ const HeroTextTop = ({ title }) => {
           duration: 1,
           delay: 0.4,
         }}
-        className="w-100 flex items-start"
+        className="w-100 flex items-start "
       >
         {/* <span className="row-message">
           We are specialised in setting up the foundation of your brand and

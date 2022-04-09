@@ -13,11 +13,11 @@ export default function Header({}) {
       transition={{
         ease: "easeInOut",
         duration: 1,
-        delay: 0.6,
+        delay: 2.5,
       }}
     >
       <Container>
-        <div className="flex justify-between items-center mt-10 h-10">
+        <div className="flex justify-between items-center pt-20 h-10 font-bold text-xl">
           <div className="flex justify-start">
             <ExportedImage src={Logo} width={140} alt="" />
           </div>
@@ -41,7 +41,7 @@ export default function Header({}) {
 
               <a
                 href={`mailto:${SITE_CONTACT_EMAIL}`}
-                className="mx-3 bg-black dark:bg-gray-100 hover:bg-white hover:text-black hover:dark:bg-transparent hover:dark:border-gray-100 hover:dark:text-gray-100 border border-black text-white dark:text-black font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
+                className="mx-3 bg-black dark:bg-gray-100 hover:bg-white hover:text-black hover:dark:bg-transparent hover:dark:border-gray-100 hover:dark:text-gray-100 border border-black text-white dark:text-black font-bold py-2 px-2 duration-200 rounded transition-colors mb-6 lg:mb-0"
               >
                 Mejla Oss
               </a>

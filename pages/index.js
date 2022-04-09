@@ -4,12 +4,17 @@ import { SITE_NAME, SITE_DESCRIPTION_SHORT } from "../lib/constants";
 // Layout components
 import Container from "../components/layout/container";
 import Layout from "../components/layout/layout";
-import HeroText from "../components/home/hero/hero-text";
+
+// import components
+import Hero from "../components/home/hero/hero";
 import Header from "../components/home/header";
+import About from "../components/home/about/about";
+import OurProcess from "../components/home/our-process/our-process";
+import Work from "../components/home/work/work";
 
 export default function Index() {
   return (
-    <>
+    <div className="grain">
       <Layout>
         <Head>
           <title>
@@ -18,9 +23,12 @@ export default function Index() {
         </Head>
         <Header />
 
-        {/* <HeroText /> */}
+        <Hero />
+        <About />
+        <OurProcess />
+        <Work />
         <Container></Container>
       </Layout>
-    </>
+    </div>
   );
 }
