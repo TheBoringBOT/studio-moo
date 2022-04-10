@@ -4,7 +4,12 @@ export default function about() {
   return (
     <>
       <SectionTitle
-        h2={"Say goodbye to slow agencies"}
+        h2={
+          <>
+            Say <span className="font-bold text-highlight-1">goodbye</span> to
+            slow agencies and unreliable freelancers.
+          </>
+        }
         p={
           "Agencies are slow, expensive and hard to work with. Moo provides provides super-quick, responsive         designs and development."
         }

@@ -1,8 +1,8 @@
 .shape1 {
   position: absolute;
   left: auto;
-  top: 0;
-  right: 0;
+  top: -20%;
+  left: 0;
   bottom: auto;
   width: 400px;
   height: 400px;
@@ -23,7 +23,7 @@
     #6248ff 79%
   );
   -webkit-filter: blur(100px);
-  filter: blur(100px);
+
   z-index: -1;
 }
 
