@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-primary text-white border-t border-accent-2 dark:border-0 dark:bg-black">
+    <footer className="bg-bg-primary text-white border-t  dark:border-0 dark:bg-black">
       <Container>
         <div className="py-28 flex flex-col  items-center xl:items-start ">
           <span className="text-2xl font-medium mb-4">Get in touch.</span>
@@ -20,8 +20,10 @@ export default function Footer() {
             Think your brand or company could do with{" "}
             <span className="text-indigo-400 font-bold">help</span> from us?
           </h3>
-          <div className="mt-10 flex items-start text-3xl underline">
-            <a href={`mailto:${SITE_CONTACT_EMAIL}`}>{SITE_CONTACT_EMAIL}</a>
+          <div className=" duration-200 transition-all hover:translate-y-[-5px] mt-10 flex items-start text-3xl border-dashed border-2 border-highlight-2 rounded-full hover:text-highlight-2">
+            <a className="px-5 py-3" href={`mailto:${SITE_CONTACT_EMAIL}`}>
+              {SITE_CONTACT_EMAIL}
+            </a>
           </div>
         </div>
       </Container>

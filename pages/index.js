@@ -26,7 +26,7 @@ export default function Index() {
 
         <Hero />
         <ClientLogos />
-        {/* <About /> */}
+        <About />
         {/* <OurProcess />
         <Work /> */}
       </Layout>
