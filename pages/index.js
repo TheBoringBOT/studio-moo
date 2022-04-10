@@ -8,6 +8,7 @@ import Layout from "../components/layout/layout";
 // import components
 import Hero from "../components/home/hero/hero";
 import Header from "../components/home/header";
+import ClientLogos from "../components/home/client-logos/client-logos";
 import About from "../components/home/about/about";
 import OurProcess from "../components/home/our-process/our-process";
 import Work from "../components/home/work/work";
@@ -24,10 +25,10 @@ export default function Index() {
         <Header />
 
         <Hero />
-        {/* <About />
-        <OurProcess />
+        <ClientLogos />
+        {/* <About /> */}
+        {/* <OurProcess />
         <Work /> */}
-        <Container></Container>
       </Layout>
     </div>
   );

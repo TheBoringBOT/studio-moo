@@ -17,24 +17,24 @@ export default function Header({}) {
       }}
     >
       <Container>
-        <div className="flex justify-between items-center pt-20 h-10 font-bold text-xl">
+        <div className="flex justify-between items-center pt-20 h-10 font-extrabold text-xl">
           <div className="flex justify-start">
             <ExportedImage src={Logo} width={140} alt="" />
           </div>
           <nav>
-            <ul className="flex justify-end items-center space-x-6">
+            <ul className="flex justify-end items-center space-x-6 uppercase ">
               <Link href="/blog">
-                <a className="hover:underline duration-200 transition-all">
+                <a className=" duration-200 transition-all rounded-full border-dashed border-2 border-transparent hover:border-bg-primary p-2 hover:translate-y-[-5px]">
                   Om Oss
                 </a>
               </Link>
               <Link href="/blog">
-                <a className="hover:underline duration-200 transition-all">
+                <a className=" duration-200 transition-all rounded-full border-dashed border-2 border-transparent hover:border-bg-primary p-2 hover:translate-y-[-5px]">
                   Tjänster
                 </a>
               </Link>
               <Link href="/blogg">
-                <a className="hover:underline duration-200 transition-all">
+                <a className="duration-200 transition-all rounded-full border-dashed border-2 border-transparent hover:border-bg-primary p-2 hover:translate-y-[-5px]">
                   Blogg
                 </a>
               </Link>
