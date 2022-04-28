@@ -7,7 +7,6 @@ import Layout from "../components/layout/layout";
 
 // import components
 import Hero from "../components/home/hero/hero";
-import Header from "../components/home/header";
 
 // smooth scroll
 import LocomotiveScroll from "../components/home/locomotive-scroll";
