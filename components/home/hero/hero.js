@@ -3,7 +3,7 @@ import Header from "./header";
 
 export default function hero() {
   return (
-    <div className="bg-mid-grey min-h-[600px] h-[80vh] ">
+    <div className="bg-mid-grey min-h-[600px] h-[80vh] max-h-[770px] ">
       <div className="flex flex-col items-center justify-center">
         <Header />
         <SectionTitle
