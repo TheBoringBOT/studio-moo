@@ -7,12 +7,12 @@ export default function Layout({ preview, children }) {
     <>
       <Meta />
 
-      <div className="min-h-screen ">
+      <div className="z-10 min-h-screen ">
         {preview && <Alert preview={preview} />}
         <main>{children}</main>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
