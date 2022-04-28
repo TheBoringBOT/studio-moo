@@ -2,7 +2,7 @@
   position: absolute;
   left: auto;
   top: -20%;
-  left: 0;
+  right: 0;
   bottom: auto;
   width: 400px;
   height: 400px;
@@ -56,9 +56,9 @@
   align-items: center;
   border-radius: 100%;
   background-color: #6bffff;
-  background-image: url("https://uploads-ssl.webflow.com/62028e2c28754c7034619636/62115ab37e04cb70f5e74763_62090c20ccb8732d34560c25_grain.png"),
+  background-image: url("/assets/images/grain.png"),
     -webkit-gradient(linear, left top, left bottom, from(#ffc145), to(#fff));
-  background-image: url("https://uploads-ssl.webflow.com/62028e2c28754c7034619636/62115ab37e04cb70f5e74763_62090c20ccb8732d34560c25_grain.png"),
+  background-image: url("/assets/images/grain.png"),
     linear-gradient(180deg, #ffc145, #fff);
   background-position: 50% 50%, 0 0;
   background-size: auto, auto;
