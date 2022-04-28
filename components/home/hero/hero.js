@@ -3,7 +3,7 @@ import Header from "./header";
 
 export default function hero() {
   return (
-    <div className="bg-mid-grey min-h-[600px] h-[82vh] ">
+    <div className="bg-mid-grey min-h-[600px] h-[80vh] ">
       <div className="flex flex-col items-center justify-center">
         <Header />
         <SectionTitle
@@ -23,7 +23,7 @@ export default function hero() {
           }
         >
           <div className="py-2 ">
-            <button className="px-10 py-5 text-xl text-white transition-all rounded-full bg-black-2 hover:bg-black-2-hover">
+            <button className="px-8 py-4 text-lg text-white transition-all rounded-full white text- bg-black-2 hover:bg-black-2-hover">
               Contact Us
             </button>
           </div>
