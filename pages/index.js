@@ -8,12 +8,10 @@ import Layout from "../components/layout/layout";
 // import components
 import Hero from "../components/home/hero/hero";
 import About from "../components/home/about/about";
-
-
+import CardGrid from "../components/home/card-grid/card-grid";
 
 export default function Index() {
   return (
-    
     <div className="grain" data-scroll-speed="1">
       <Layout>
         <Head>
@@ -25,9 +23,9 @@ export default function Index() {
         <Hero />
         <Container>
           <About />
+          <CardGrid />
         </Container>
       </Layout>
     </div>
-    
   );
 }
