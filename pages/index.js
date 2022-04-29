@@ -9,6 +9,8 @@ import Layout from "../components/layout/layout";
 import Hero from "../components/home/hero/hero";
 import About from "../components/home/about/about";
 import CardGrid from "../components/home/card-grid/card-grid";
+import Faq from "../components/home/faq/faq";
+import Footer from "../components/home/footer/footer";
 
 export default function Index() {
   return (
@@ -25,6 +27,10 @@ export default function Index() {
           <About />
           <CardGrid />
         </Container>
+        {/* <div className="bg-light-grey">
+          <Faq />
+        </div> */}
+        <Footer />
       </Layout>
     </div>
   );
