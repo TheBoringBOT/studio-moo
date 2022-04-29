@@ -1,12 +1,12 @@
-import styles from "./card.module.css";
 export default function CardHalf({ background, color, children }) {
   return (
     <article
-      className={`${styles.card} ${background && background} ${
-        color && color
-      }  rounded-md lg:rounded-lg col-span-2 md:col-span-1 min-h-card-sm lg:min-h-card-lg`}
+      className={`${background ? background : "bg-white"} ${
+        color ? color : "text-black"
+      } shadow-card
+     col-span-2 md:col-span-1   `}
     >
-      {children}
+      <div className="card">{children}</div>
     </article>
   );
 }
