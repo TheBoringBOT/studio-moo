@@ -11,9 +11,9 @@ module.exports = {
       colors: {
         "black-2": "#1D1D1F",
         "black-2-hover": "#272729",
-        "light-grey": "#F5F5F7",
+        "light-grey": "#fafafa",
         "mid-grey": "#DDDDE1",
-        "dark-grey": "#86868B",
+        "dark-grey": "#86868b",
       },
       spacing: {
         28: "7rem",
