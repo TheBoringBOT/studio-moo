@@ -23,7 +23,7 @@ export default function sectionTitle({ children, h1, h2, h3, p, widthRemove }) {
           )}
         </div>
         {/* subtitle */}
-        <div className="text-2xl font-medium tracking-tight md:text-3xl text-black-2">
+        <div className="text-2xl font-medium tracking-tight md:px-8 md:text-3xl text-black-2">
           {p && <p>{p}</p>}
         </div>
 
