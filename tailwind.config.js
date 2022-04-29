@@ -34,9 +34,13 @@ module.exports = {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
-      height: {
-        "card-lg": "800px",
+      minHeight: {
         "card-sm": "600px",
+        "card-lg": "800px",
+      },
+      borderRadius: {
+        md: "30px",
+        lg: "40px",
       },
     },
   },
