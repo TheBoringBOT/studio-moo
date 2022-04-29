@@ -33,23 +33,6 @@ module.exports = {
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
-        
-      },
-      minHeight: {
-        "card-sm": "600px",
-        "card-md": "820px",
-      },
-      borderRadius: {
-        md: "30px",
-        lg: "40px",
-      },
-      padding: {
-        "card-sm-y": "50px",
-        "card-md-y": "70px",
-        "card-lg-y": "90px",
-        "card-sm-x": "30px",
-        "card-md-x": "40px",
-        "card-lg-x": "80px",
       },
     },
   },
