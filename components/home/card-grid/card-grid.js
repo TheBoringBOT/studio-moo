@@ -9,6 +9,7 @@ export default function CardGrid() {
         <CardFull />
         <CardHalf />
         <CardHalf />
+        <CardFull />
       </section>
     </>
   );
