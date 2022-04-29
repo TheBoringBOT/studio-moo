@@ -10,9 +10,79 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-style: normal;
+  font-size: 16px;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-synthesis: none;
+  -moz-font-feature-settings: "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: ltr;
+  text-align: left;
 }
 
 @layer components {
+  .gradient-title {
+    color: transparent;
+    background: linear-gradient(
+      90deg,
+      #fbf4ec 0%,
+      #ecd7c8 16.5%,
+      #eea4bc 33%,
+      #be88c4 49.5%,
+      #9186e7 66%,
+      #92c9f9 82.5%,
+      #c7f8ff 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-animation: intro-gradient 10s infinite ease both;
+    -moz-animation: intro-gradient 10s infinite ease both;
+    animation: intro-gradient 10s infinite ease both;
+  }
+
+  @-webkit-keyframes intro-gradient {
+    0% {
+      background-position: 0% 4%;
+    }
+    50% {
+      background-position: 100% 97%;
+    }
+    100% {
+      background-position: 0% 4%;
+    }
+  }
+  @-moz-keyframes intro-gradient {
+    0% {
+      background-position: 0% 4%;
+    }
+    50% {
+      background-position: 100% 97%;
+    }
+    100% {
+      background-position: 0% 4%;
+    }
+  }
+  @keyframes intro-gradient {
+    0% {
+      background-position: 0% 4%;
+    }
+    50% {
+      background-position: 100% 97%;
+    }
+    100% {
+      background-position: 0% 4%;
+    }
+  }
   .card {
     perspective: 3200px;
     box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.05);
