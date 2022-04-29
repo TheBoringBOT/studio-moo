@@ -3,7 +3,7 @@ import { SITE_FOOTER_TEXT } from "../../../lib/constants";
 
 export default function Footer() {
   return (
-    <footer className=" mt-28 bg-light-grey h-[70vh] min-h-600px flex flex-col justify-center items-center">
+    <footer className="mt-28 bg-light-grey h-[70vh] min-h-600px max-h-[780px] flex flex-col justify-center items-center">
       <div className="flex flex-col mt-auto">
         <SectionTitle
           h2={
