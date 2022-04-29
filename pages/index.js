@@ -7,14 +7,14 @@ import Layout from "../components/layout/layout";
 
 // import components
 import Hero from "../components/home/hero/hero";
+import About from "../components/home/about/about";
 
-// smooth scroll
-import LocomotiveScroll from "../components/home/locomotive-scroll";
+
 
 export default function Index() {
   return (
-    // <LocomotiveScroll>
-    <div className="grain">
+    
+    <div className="grain" data-scroll-speed="1">
       <Layout>
         <Head>
           <title>
@@ -23,8 +23,11 @@ export default function Index() {
         </Head>
 
         <Hero />
+        <Container>
+          <About />
+        </Container>
       </Layout>
     </div>
-    // </LocomotiveScroll>
+    
   );
 }
