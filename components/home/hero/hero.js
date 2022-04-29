@@ -19,7 +19,7 @@ export default function hero() {
   return (
     <div ref={containerRef}>
       <div
-        className="bg-mid-grey sticky top-0 -z-10 min-h-[600px] h-[80vh]
+        className="bg-mid-grey sticky top-0  min-h-[600px] h-[80vh]
       max-h-[770px] "
       >
         {/* Parallax div */}
@@ -48,8 +48,8 @@ export default function hero() {
                 </>
               }
             >
-              <div className="py-2 ">
-                <button className="px-8 py-4 text-lg text-white transition-all rounded-full white text- bg-black-2 hover:bg-black-2-hover">
+              <div className="z-10 py-2">
+                <button className="px-8 py-4 text-lg text-white transition-all rounded-full cursor-pointer white text- bg-black-2 hover:bg-black-2-hover">
                   Contact Us
                 </button>
               </div>
