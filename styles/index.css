@@ -11,3 +11,35 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
 }
+
+@layer components {
+  .card {
+    perspective: 3200px;
+    box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    min-height: 600px;
+  }
+
+  @media screen(sm) {
+    .card-content {
+      padding: 50px 30px;
+    }
+  }
+  @media screen(md) {
+    .card {
+      border-radius: 30px;
+    }
+    .card-content {
+      padding: 70px 40px;
+    }
+  }
+  @media screen(lg) {
+    .card {
+      border-radius: 40px;
+      min-height: 820px;
+    }
+    .card-content {
+      padding: 90px 80px;
+    }
+  }
+}
