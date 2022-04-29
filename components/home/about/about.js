@@ -16,7 +16,7 @@ export default function about() {
           </>
         }
       ></SectionTitle>
-      <Spacer />
+      
     </div>
   );
 }
