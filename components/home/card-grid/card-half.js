@@ -4,7 +4,7 @@ export default function CardHalf({ background, color, children }) {
     <article
       className={`${styles.card} ${background && background} ${
         color && color
-      } col-span-2 md:col-span-1 min-h-card-sm lg:min-h-card-lg`}
+      }  rounded-md lg:rounded-lg col-span-2 md:col-span-1 min-h-card-sm lg:min-h-card-lg`}
     >
       {children}
     </article>
