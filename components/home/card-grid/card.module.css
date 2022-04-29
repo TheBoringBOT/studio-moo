@@ -1,5 +1,4 @@
 .card {
-  perspective: 1000px;
-  border-radius: 50px;
-  box-shadow: 4px 12px 40px 6px rgb(0 0 0 / 9%);
+  perspective: 3200px;
+ box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.05);
 }
