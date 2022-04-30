@@ -14,7 +14,7 @@ import Footer from "../components/home/footer/footer";
 
 export default function Index() {
   return (
-    <div className="grain" data-scroll-speed="1">
+    <div className="overflow-hidden bg-white">
       <Layout>
         <Head>
           <title>
