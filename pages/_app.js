@@ -1,4 +1,5 @@
 import "../styles/index.css";
+import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import { motion } from "framer-motion";
 import { pageVariants } from "../lib/animation-constants";
@@ -9,6 +10,9 @@ import { pageVariants } from "../lib/animation-constants";
 //! i8n in next.js does not work with export. So removed multiple language support for now.
 //? possible solution: try to use i18n in next.js with https://github.com/martinkr/next-export-i18n
 export default function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
   return (
     <ThemeProvider attribute="class">
       {/* <motion.div
