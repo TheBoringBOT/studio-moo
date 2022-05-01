@@ -1,9 +1,11 @@
 import SectionTitle from "../section-title";
 import Spacer from "../../layout/spacer";
+import FadeInText from "../../animation/fade-in-text";
 export default function about() {
   return (
     <div>
       <Spacer />
+
       <SectionTitle
         widthRemove={true}
         h2={<>Sit viverra nullam quis. Ullamcorper lacus.</>}
@@ -16,7 +18,6 @@ export default function about() {
           </>
         }
       ></SectionTitle>
-      
     </div>
   );
 }
