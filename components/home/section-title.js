@@ -8,14 +8,14 @@ export default function sectionTitle({ children, h1, h2, h3, p, widthRemove }) {
         <div className="flex flex-col items-center justify-center pt-2 space-y-8 leading-none tracking-tight text-center">
           {/* title */}
 
-          <div className="overflow-hidden font-bold text-black title-normal ">
+          <div className="overflow-hidden font-bold text-black-2 title-normal ">
             {h1 && (
-              <h1 className="tracking-tight  text-[3.6rem] md:text-[5.3rem] ">
+              <h1 className="tracking-tight  text-[3.6rem] md:text-[5.1rem] ">
                 {h1}
               </h1>
             )}
             {h2 && (
-              <h2 className="tracking-tight  text-[3.4rem] md:text-[5.1rem]">
+              <h2 className="tracking-tight  text-[3.4rem] md:text-[5rem]">
                 {h2}
               </h2>
             )}
@@ -27,7 +27,7 @@ export default function sectionTitle({ children, h1, h2, h3, p, widthRemove }) {
           </div>
 
           {/* subtitle */}
-          <div className="text-2xl font-medium tracking-tight md:px-8 md:text-3xl text-black-2">
+          <div className="text-2xl font-normal tracking-tight md:px-8 md:text-3xl text-black-2">
             {p && <p>{p}</p>}
           </div>
 
