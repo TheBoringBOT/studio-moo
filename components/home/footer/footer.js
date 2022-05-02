@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
         </SectionTitle>
       </div>
-      <div className="flex flex-col items-center py-10 mt-auto space-y-2 text-dark-grey">
+      <div className="flex flex-col items-center py-10 mt-auto space-y-2 text-dark-grey opacity-60">
         <span className="font-semibold">{SITE_FOOTER_TEXT}</span>
         <span className="font-light text-md">Webbyrån I Stockholm</span>
       </div>
