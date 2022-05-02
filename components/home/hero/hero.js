@@ -20,9 +20,9 @@ export default function hero() {
     scrollProgress = Math.min(1, scrollPosition / elCurrent.clientHeight);
   }
   return (
-    <div
+    <section
       ref={containerRef}
-      className="bg-mid-grey sticky top-0  min-h-[690px] h-[80vh]
+      className="bg-mid-grey  min-h-[690px] h-[80vh]
       max-h-[80vh] md:max-h-full "
     >
       {/* Parallax div */}
@@ -66,6 +66,6 @@ export default function hero() {
       <div className={styles.shape2}></div> */}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
