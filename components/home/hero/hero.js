@@ -22,7 +22,7 @@ export default function hero() {
   return (
     <div
       ref={containerRef}
-      className="bg-mid-grey sticky top-0  min-h-[690px] h-[72vh]
+      className="bg-mid-grey sticky top-0  min-h-[690px] h-[80vh]
       max-h-[80vh] md:max-h-full "
     >
       {/* Parallax div */}
