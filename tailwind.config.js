@@ -4,6 +4,9 @@ module.exports = {
   plugins: [require("@tailwindcss/line-clamp")],
   theme: {
     extend: {
+      borderRadius: {
+        "4xl": "32px",
+      },
       screens: {
         "3xl": "1600px",
         "4xl": "1920px",
