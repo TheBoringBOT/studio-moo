@@ -15,26 +15,24 @@ import Footer from "../components/home/footer/footer";
 
 export default function Index() {
   return (
-    <div className="bg-white ">
-      <Layout>
-        <Head>
-          <title>
-            {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
-          </title>
-        </Head>
+    <Layout>
+      <Head>
+        <title>
+          {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
+        </title>
+      </Head>
 
-        <Hero />
+      <Hero />
 
-        <About />
-        <Spacer />
-        <CardGrid />
+      <About />
+      <Spacer />
+      <CardGrid />
 
-        <ProjectCta />
-        {/* <div className="bg-light-grey">
+      <ProjectCta />
+      {/* <div className="bg-light-grey">
           <Faq />
         </div> */}
-        <Footer />
-      </Layout>
-    </div>
+      <Footer />
+    </Layout>
   );
 }
