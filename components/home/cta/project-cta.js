@@ -73,11 +73,11 @@ export default function projectCta() {
         style={{ opacity: animateGradientOverlay }}
         className="absolute bottom-0 left-0 w-full h-5/6 bg-gradient-to-b from-white -z-1"
       ></motion.div>
-      <div className="h-[200vh] relative">
+      <div className="h-[230vh] relative">
         {/* invisible div to use for animation tracking */}
         <div
           ref={containerRef}
-          className="absolute invisible -z-100  w-full h-40 bottom-[70vh]"
+          className="absolute invisible -z-100  w-full h-40 bottom-[100vh]"
         ></div>
 
         {/* Each section is separated with a div to enable simpler animation tracking and manipulation */}
