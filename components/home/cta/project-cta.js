@@ -1,10 +1,8 @@
-import { useRef, useEffect, useState, useLayoutEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useViewportScroll, useTransform, motion } from "framer-motion";
 import useRefScrollProgress from "../../../hooks/useRefScrollProgress";
 
-import SectionTitle from "../section-title";
-
-export default function projectCta() {
+export default function projectCta({ setModalOpen }) {
   //TODO: look into refactoring these animation, there probably is a cleaner way to do this
   const containerRef = useRef(null);
   const { ref, start, end } = useRefScrollProgress(containerRef);
@@ -114,7 +112,10 @@ export default function projectCta() {
               style={{ opacity: animateOpacity3 }}
               className="z-10 py-2"
             >
-              <button className="px-8 py-4 text-lg text-white transition-all bg-black rounded-full cursor-pointer white text- hover:bg-light-grey">
+              <button
+                onClick={() => setModalOpen(true)}
+                className="px-8 py-4 text-lg text-white transition-all bg-black rounded-full cursor-pointer white text- hover:bg-light-grey"
+              >
                 Get Started
               </button>
             </motion.div>
