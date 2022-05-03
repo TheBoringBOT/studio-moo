@@ -1,14 +1,12 @@
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 //? Hook from https://cole.codes/posts/framer-motion-useviewportscroll-element-scroll
 
 export default function useRefScrollProgress(inputRef) {
-
-
   const ref = inputRef || useRef();
   const [start, setStart] = useState(null);
   const [end, setEnd] = useState(null);
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!ref.current) {
       return;
     }
