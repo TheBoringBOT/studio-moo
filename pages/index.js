@@ -1,5 +1,9 @@
 import Head from "next/head";
-import { SITE_NAME, SITE_DESCRIPTION_SHORT } from "../lib/constants";
+import {
+  SITE_NAME,
+  SITE_DESCRIPTION_SHORT,
+  SITE_DESCRIPTION,
+} from "../lib/constants";
 
 // Layout components
 import Spacer from "../components/layout/spacer";
@@ -20,6 +24,7 @@ export default function Index() {
         <title>
           {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
         </title>
+        <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
 
       <Hero />
