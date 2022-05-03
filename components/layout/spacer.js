@@ -1,3 +1,3 @@
 export default function Spacer() {
-  return <div className="h-24"></div>;
+  return <spacer className="inline-block h-24"></spacer>;
 }

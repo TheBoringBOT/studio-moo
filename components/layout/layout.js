@@ -6,10 +6,7 @@ export default function Layout({ preview, children }) {
     <>
       <Meta />
 
-      <div>
-        {preview && <Alert preview={preview} />}
-        <main>{children}</main>
-      </div>
+      <main className="bg-white">{children}</main>
 
       {/* <Footer /> */}
     </>

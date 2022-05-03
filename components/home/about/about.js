@@ -4,7 +4,7 @@ import Spacer from "../../layout/spacer";
 import FadeInText from "../../animation/fade-in-text";
 export default function about() {
   return (
-    <section>
+    <section className="relative bg-white">
       <Container>
         <SectionTitle
           widthRemove={true}
