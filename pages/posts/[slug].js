@@ -35,6 +35,7 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {post.title} | {SITE_NAME}
                 </title>
+                <meta name="description" content={post.content} />
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
               <PostHeader
