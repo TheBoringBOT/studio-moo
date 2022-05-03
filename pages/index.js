@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import {
   SITE_NAME,
@@ -9,7 +10,7 @@ import {
 import Spacer from "../components/layout/spacer";
 import Layout from "../components/layout/layout";
 
-// import components
+// import section components
 import Hero from "../components/home/hero/hero";
 import About from "../components/home/about/about";
 import CardGrid from "../components/home/card-grid/card-grid";
@@ -17,27 +18,48 @@ import Faq from "../components/home/faq/faq";
 import ProjectCta from "../components/home/cta/project-cta";
 import Footer from "../components/home/footer/footer";
 
+//modal component
+import Modal from "../components/layout/modal";
+
+//import forms
+import ContactForm from "../components/form/contact-form";
+import ProjectRequestForm from "../components/form/project-request";
+
 export default function Index() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentForm, setCurrentForm] = useState(1);
+
+  //form numbers
+  // contact form = 1;
+  // project request form = 2;
+
   return (
-    <Layout>
-      <Head>
-        <title>
-          {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
-        </title>
-        <meta name="description" content={SITE_DESCRIPTION} />
-      </Head>
+    <>
+      <Layout>
+        <Head>
+          <title>
+            {SITE_NAME} | {SITE_DESCRIPTION_SHORT}
+          </title>
+          <meta name="description" content={SITE_DESCRIPTION} />
+        </Head>
 
-      <Hero />
+        <Hero />
 
-      <About />
-      <Spacer />
-      <CardGrid />
+        <About />
+        <Spacer />
+        <CardGrid />
 
-      <ProjectCta />
-      {/* <div className="bg-light-grey">
+        <ProjectCta setModalOpen={setModalOpen} />
+        {/* <div className="bg-light-grey">
           <Faq />
         </div> */}
-      <Footer />
-    </Layout>
+        <Footer />
+      </Layout>
+      {modalOpen && (
+        <Modal setModalOpen={setModalOpen}>
+          {currentForm === 1 ? <ContactForm /> : <ProjectRequestForm />}
+        </Modal>
+      )}
+    </>
   );
 }
