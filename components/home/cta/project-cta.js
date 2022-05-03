@@ -67,11 +67,11 @@ export default function projectCta() {
   return (
     <section className="mt-[-100vh] bg-white relative text-center overflow-visible">
       {/* background image - make sure overlay and image have same size */}
-      <div className="absolute bottom-0 w-full bg-indigo-400 h-4/6"></div>
+      <div className="absolute bottom-0 w-full bg-indigo-400 h-5/6"></div>
       {/* gradient overlay for background - fade out on scroll */}
       <motion.div
         style={{ opacity: animateGradientOverlay }}
-        className="absolute bottom-0 left-0 w-full h-4/6 bg-gradient-to-b from-white -z-1"
+        className="absolute bottom-0 left-0 w-full h-5/6 bg-gradient-to-b from-white -z-1"
       ></motion.div>
       <div className="h-[200vh] relative">
         {/* invisible div to use for animation tracking */}
@@ -84,7 +84,7 @@ export default function projectCta() {
         <motion.div className="sticky top-0 h-screen ">
           <motion.div
             style={{ translateY: animateTranslateY, scale: animateScale }}
-            className="flex flex-col items-center justify-center h-full w-[800px] pt-28 space-y-8  max-w-[90vw] mx-auto leading-none tracking-tight"
+            className="flex flex-col items-center justify-center h-full w-[800px] py-28 space-y-8  max-w-[90vw] mx-auto leading-none tracking-tight"
           >
             {/* title */}
             <motion.div
