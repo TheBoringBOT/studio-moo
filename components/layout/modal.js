@@ -7,7 +7,7 @@ export default function modal({ setModalOpen, props, children }) {
       <Dialog
         as="div"
         className="fixed inset-0 z-10 overflow-y-auto rounded "
-        onClose={() => setModalOpen(false)}
+        onClose={() => null}
       >
         <div className="min-h-screen px-4 text-center text-black rounded h-[90vh] w-90">
           <Transition.Child
