@@ -26,7 +26,7 @@ import ContactForm from "../components/form/contact-form";
 import ProjectRequestForm from "../components/form/project-request";
 
 export default function Index(props) {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [currentForm, setCurrentForm] = useState(2);
 
   //form numbers
