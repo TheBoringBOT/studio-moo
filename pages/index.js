@@ -25,9 +25,9 @@ import Modal from "../components/layout/modal";
 import ContactForm from "../components/form/contact-form";
 import ProjectRequestForm from "../components/form/project-request";
 
-export default function Index() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentForm, setCurrentForm] = useState(1);
+export default function Index(props) {
+  const [modalOpen, setModalOpen] = useState(true);
+  const [currentForm, setCurrentForm] = useState(2);
 
   //form numbers
   // contact form = 1;
@@ -57,9 +57,24 @@ export default function Index() {
       </Layout>
       {modalOpen && (
         <Modal setModalOpen={setModalOpen}>
-          {currentForm === 1 ? <ContactForm /> : <ProjectRequestForm />}
+          {currentForm === 1 ? (
+            <ContactForm setModalOpen={setModalOpen} />
+          ) : (
+            <ProjectRequestForm props={props} setModalOpen={setModalOpen} />
+          )}
         </Modal>
       )}
     </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      public_key: process.env.EMAILJS_PUBLIC_KEY,
+      private_key: process.env.EMAILJS_PRIVATE_KEY,
+      service_id: process.env.EMAILJS_SERVICE_ID,
+      template_id: process.env.EMAILJS_TEMPLATE_ID,
+    },
+  };
 }
