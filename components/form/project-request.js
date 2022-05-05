@@ -69,12 +69,12 @@ export default function Test({ setModalOpen, props }) {
                       id={service}
                     />
                     <label
-                      class="flex p-5 bg-light-grey  border-mid-grey border-2 rounded-lg cursor-pointer focus:outline-none  peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent font-medium text-black-2-hover"
+                      class="flex p-5 bg-light-grey  border-mid-grey border-2 rounded-lg cursor-pointer focus:outline-none  peer-checked:ring-black-2 peer-checked:ring-2 peer-checked:border-transparent font-medium text-black-2-hover"
                       for={service}
                     >
                       {service}
                     </label>
-                    <div class="absolute  top-1/2 right-5  -translate-y-1/2 w-6 h-6   bg-mid-grey/50 rounded-full peer-checked:bg-white  flex justify-center items-center text-mid-grey/0 peer-checked:text-blue-500">
+                    <div class="absolute  top-1/2 right-5  -translate-y-1/2 w-6 h-6   bg-mid-grey/50 rounded-full peer-checked:bg-white  flex justify-center items-center text-mid-grey/0 peer-checked:text-black-2">
                       <AiFillCheckCircle
                         size={26}
                         className=" peer-checked:block"
@@ -105,12 +105,12 @@ export default function Test({ setModalOpen, props }) {
                       id={budget}
                     />
                     <label
-                      class="flex p-5 bg-light-grey border-mid-grey border-2 rounded-lg cursor-pointer focus:outline-none  peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent font-medium text-black-2-hover"
+                      class="flex p-5 bg-light-grey border-mid-grey border-2 rounded-lg cursor-pointer focus:outline-none  peer-checked:ring-black-2 peer-checked:ring-2 peer-checked:border-transparent font-medium text-black-2-hover"
                       for={budget}
                     >
                       {budget}
                     </label>
-                    <div class="absolute  top-1/2 right-5  -translate-y-1/2 w-6 h-6   bg-mid-grey/50 rounded-full peer-checked:bg-white  flex justify-center items-center text-mid-grey/0 peer-checked:text-blue-500">
+                    <div class="absolute  top-1/2 right-5  -translate-y-1/2 w-6 h-6   bg-mid-grey/50 rounded-full peer-checked:bg-white  flex justify-center items-center text-mid-grey/0 peer-checked:text-black-2">
                       <AiFillCheckCircle
                         size={26}
                         className=" peer-checked:block"
@@ -178,7 +178,10 @@ export default function Test({ setModalOpen, props }) {
             {formName}
           </h3>
           <p>Vi återkommer till dig så snart som möjligt</p>
-          <button className="text-blue-500" onClick={() => setModalOpen(false)}>
+          <button
+            className="text-blue-500 rounded-full"
+            onClick={() => setModalOpen(false)}
+          >
             Stänga
           </button>
         </div>
@@ -247,7 +250,7 @@ const FormikStepper = ({ children, ...props }) => {
                 key={index}
                 className={`${
                   index === currentStep || index < currentStep
-                    ? "bg-blue-500"
+                    ? "bg-black-2"
                     : "bg-mid-grey/80"
                 } text-sm transition-all font-medium h-1 w-[20px] rounded`}
               ></div>
@@ -285,7 +288,7 @@ const FormikStepper = ({ children, ...props }) => {
             >
               <div className="w-full mt-8">{currentChild}</div>
               <button
-                className="px-10 py-3 mt-auto font-semibold text-white bg-blue-500 rounded min-w-[150px] text-center"
+                className="px-10 py-3 mt-auto font-semibold text-white bg-black-2 hover:bg-black-2-hover transition-all rounded-full min-w-[150px] text-center"
                 type="submit"
               >
                 {isSubmitting
