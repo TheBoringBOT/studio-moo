@@ -9,7 +9,7 @@ export default function modal({ setModalOpen, props, children }) {
         className="fixed inset-0 z-10 overflow-y-auto rounded "
         onClose={() => null}
       >
-        <div className="min-h-screen px-4 text-center text-black rounded h-[90vh] w-90">
+        <div className="mx-auto min-h-screen text-center text-black rounded w-full h-full  max-h-[720px] max-w-[980px] md:px-4  md:h-[90vh] md:w-90">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -38,7 +38,7 @@ export default function modal({ setModalOpen, props, children }) {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="inline-block    overflow-hidden text-left align-middle transition-all transform bg-white rounded-4xl border-text-primary  h-[90vh] max-h-[720px] max-w-[980px] w-[90vw] ">
+            <div className="inline-block    overflow-hidden text-left align-middle transition-all transform bg-white md:rounded-4xl border-text-primary md:max-h-[720px] md:max-w-[980px] w-full h-full mx-auto ">
               {children}
             </div>
           </Transition.Child>
