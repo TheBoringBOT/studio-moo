@@ -22,7 +22,7 @@ import Footer from "../components/home/footer/footer";
 import Modal from "../components/layout/modal";
 
 //import forms
-import ContactForm from "../components/form/contact-form";
+// import ContactForm from "../components/form/contact-form";
 import ProjectRequestForm from "../components/form/project-request";
 
 export default function Index(props) {
@@ -58,7 +58,8 @@ export default function Index(props) {
       {modalOpen && (
         <Modal setModalOpen={setModalOpen}>
           {currentForm === 1 ? (
-            <ContactForm setModalOpen={setModalOpen} />
+            // <ContactForm setModalOpen={setModalOpen} />
+            <h1>placeholder</h1>
           ) : (
             <ProjectRequestForm props={props} setModalOpen={setModalOpen} />
           )}
