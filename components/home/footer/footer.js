@@ -3,20 +3,20 @@ import { SITE_FOOTER_TEXT } from "../../../lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="z-10 relative  bg-white h-[85vh] min-h-600px max-h-[780px] flex flex-col justify-center items-center">
+    <footer className="z-10 relative  bg-black-3 h-[85vh] min-h-600px max-h-[780px] flex flex-col justify-center items-center">
       <div className="flex flex-col mt-auto">
         <SectionTitle
           h2={
             <p className="gradient-title">Quam ut tellus blandit est et in.</p>
           }
           p={
-            <span className="text-xl md:text-2xl">
+            <span className="text-xl text-mid-grey md:text-2xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </span>
           }
         >
           <div className="py-2 ">
-            <button className="px-8 py-4 text-lg text-white transition-all rounded-full cursor-pointer white text- bg-black-2 hover:bg-black-2-hover">
+            <button className="px-8 py-4 text-lg transition-all bg-white rounded-full cursor-pointer text-black-2 white text- hover:bg-mid-grey">
               Contact Us
             </button>
           </div>
