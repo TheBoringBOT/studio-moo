@@ -1,4 +1,4 @@
-// import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs'
+import { AiOutlineUp, AiOutlineDown } from "react-icons/ai";
 
 const AccordionLayout = ({
   title,
@@ -11,26 +11,34 @@ const AccordionLayout = ({
     activeIndex === index ? setActiveIndex(null) : setActiveIndex(index);
 
   return (
-    <div className="w-full mx-auto ">
+    <div className="w-full px-10 mx-auto lg:px-0 ">
       <button
         onClick={() => handleSetIndex(index)}
-        className="py-[1em] flex flex-col justify-between w-full px-10 mt-2 bg-transparent border-b border-mid-grey"
+        className={`${
+          index === 2 ? "border-0" : "border-t"
+        } w-full  overflow-hidden  py-[1.3em] flex flex-col justify-between   mt-2 bg-transparent  border-black-4 `}
       >
-        <div className="flex">
-          <div className="text-2xl font-semibold text-black hover:text-black-2">
+        <div className="flex items-center justify-between w-full">
+          <div className="text-xl font-medium text-white lg:text-2xl hover:light-grey">
             {title}
           </div>
+          <div className="flex justify-start space-y-10 transition-all duration-500 ease-in-out items-between text-mid-grey ">
+            <AiOutlineDown
+              size={24}
+              className={`${
+                activeIndex === index && "   scale-y-[-1]"
+              } test transition-all duration-500 easein-out text-dark-grey font-semibold `}
+            />
+          </div>
         </div>
-        <div className="flex justify-start space-y-10 items-between">
-          {/* {
-                (activeIndex === index) 
-                ? <BsFillArrowDownCircleFill className='w-8 h-8' />
-                : <BsFillArrowUpCircleFill className='w-8 h-8' />
-                } */}
+
+        <div
+          className={`${
+            activeIndex !== index ? "  max-h-0 overflow-hidden " : "max-h-40 "
+          }  transition-all duration-500  ease-in-out text-left relative z-1 text-light-grey`}
+        >
+          <div className="py-5 lg:text-lg">{children}</div>
         </div>
-        {activeIndex === index && (
-          <div className="py-3 text-left ">{children}</div>
-        )}
       </button>
     </div>
   );
