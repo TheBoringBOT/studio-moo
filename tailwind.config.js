@@ -14,7 +14,10 @@ module.exports = {
       colors: {
         "black-2": "#1D1D1F",
         "black-2-hover": "#272729",
-        "light-grey": "#fafafa",
+        "black-3": "#161617",
+        "black-4": "#424245",
+
+        "light-grey": "#f5f5f7",
         "mid-grey": "#DDDDE1",
         "dark-grey": "#86868b",
       },
