@@ -4,7 +4,7 @@ import Accordion from "./accordion";
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(2);
   return (
-    <section className="py-5 mx-auto pb-28 max-w-7xl ">
+    <div className="py-5 mx-auto pb-28 max-w-7xl ">
       <SectionTitle
         h3={
           <span className="text-light-grey">
@@ -27,7 +27,7 @@ export default function Faq() {
           </Accordion>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 

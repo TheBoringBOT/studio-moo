@@ -50,9 +50,9 @@ export default function Index(props) {
         <CardGrid />
 
         <ProjectCta setModalOpen={setModalOpen} />
-        <div className="bg-black">
+        <section className="bg-black">
           <Faq />
-        </div>
+        </section>
         <Footer />
       </Layout>
       {modalOpen && (
