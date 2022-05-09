@@ -128,7 +128,7 @@ export default function Test({ setModalOpen, props }) {
           <StepWrapper title="Ange detaljer om ditt projekt">
             <Field
               rows="8"
-              className="w-full px-5 py-5 font-medium rounded-lg text-black-2-hover focus:outline-none focus:border-none focus:ring-0 bg-light-grey border border-mid-grey/50"
+              className="w-full px-5 py-5 font-medium border rounded-lg text-black-2-hover focus:outline-none focus:border-none focus:ring-0 bg-light-grey border-mid-grey/50"
               name="message"
               label="Message"
               type="text"
@@ -163,10 +163,17 @@ export default function Test({ setModalOpen, props }) {
               label="Website"
               type="text"
             />
-            <div className="flex items-center justify-center w-full h-10 font-medium text-center text-red-500 appearance-none">
-              <ErrorMessage name="name" />
-              <ErrorMessage name="email" />
-              <ErrorMessage name="website" />
+            <div className="flex flex-col items-center justify-center w-full h-10 pt-8 space-y-2 font-medium text-center text-red-500 appearance-none">
+              <span>
+                <ErrorMessage name="name" />
+              </span>
+              <span>
+                <ErrorMessage name="email" />
+              </span>
+              <span>
+                {" "}
+                <ErrorMessage name="website" />
+              </span>
             </div>
           </StepWrapper>
         </FormikStepper>
@@ -215,7 +222,7 @@ const FormikStepper = ({ children, ...props }) => {
   });
   const contactValidation = Yup.object().shape({
     email: Yup.string().email("Ogiltigt e-postformat").required("e-post krävs"),
-    name: Yup.string().required("Namn krävs"),
+    name: Yup.string().required("Namn krävs "),
     website: Yup.string(),
   });
   const validationSchemaArray = [
@@ -227,7 +234,7 @@ const FormikStepper = ({ children, ...props }) => {
 
   return (
     <>
-      <div className="flex flex-col items-center w-full h-full justify-cente ">
+      <div className="flex flex-col items-center justify-center w-full h-full ">
         {/* form top */}
         <div className="flex items-center justify-between w-full h-16 px-10 border-b border-mid-grey/80">
           {/* back step */}
