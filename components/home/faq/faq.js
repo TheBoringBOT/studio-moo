@@ -4,17 +4,17 @@ import Accordion from "./accordion";
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(2);
   return (
-    <section className="py-5 mx-auto pb-28 mt-28 max-w-7xl ">
+    <section className="py-5 mx-auto pb-28 max-w-7xl ">
       <SectionTitle
         h3={
-          <>
+          <span className="text-light-grey">
             Tempor velit amet <br />
             sint ex.
-          </>
+          </span>
         }
       />
 
-      <div className="flex flex-col items-center justify-center max-w-4xl pb-16 mx-auto">
+      <div className="flex flex-col items-center justify-center max-w-4xl pb-16 mx-auto ">
         {/* map over faqQuestions  */}
         {faqQuestions.map((question, index) => (
           <Accordion
@@ -35,26 +35,32 @@ export default function Faq() {
 const faqQuestions = [
   {
     question: "How Do I use Studio Moo?",
-    answer: "nothing",
+    answer:
+      "the answer is here and you can see it, but if you want to see it you have to click on the question",
   },
   {
     question: "How Do I use Studio Moo?",
-    answer: "nothing",
+    answer:
+      "the answer is here and you can see it, but if you want to see it you have to click on the question",
   },
   {
     question: "How Do I use Studio Moo?",
-    answer: "nothing",
+    answer:
+      "the answer is here and you can see it, but if you want to see it you have to click on the question",
   },
   {
     question: "How Do I use Studio Moo?",
-    answer: "nothing",
+    answer:
+      "the answer is here and you can see it, but if you want to see it you have to click on the question",
   },
   {
     question: "How Do I use Studio Moo?",
-    answer: "nothing",
+    answer:
+      "the answer is here and you can see it, but if you want to see it you have to click on the question",
   },
   {
     question: "How Do I use Studio Moo?",
-    answer: "nothing",
+    answer:
+      "the answer is here and you can see it, but if you want to see it you have to click on the question",
   },
 ];
