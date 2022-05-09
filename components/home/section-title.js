@@ -20,7 +20,7 @@ export default function sectionTitle({ children, h1, h2, h3, p, widthRemove }) {
               </h2>
             )}
             {h3 && (
-              <h3 className="tracking-tight  text-[2.1rem] md:text-[4.1rem]">
+              <h3 className="tracking-tight  text-[3.2rem] md:text-[5rem]">
                 {h3}
               </h3>
             )}
